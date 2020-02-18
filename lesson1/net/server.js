@@ -15,9 +15,6 @@ const server = net.createServer((connection) => {
     // Now that a TCP connection has been established, the server can send data to
     // the client by writing to its socket.
     connection.write('Hello World!\r\n');
-    for(var i=1; i <= 10; i++) {
-        connection.write(i + ') I love node!\r\n');
-    }
     connection.pipe(connection);
 });
 
